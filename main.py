@@ -6,8 +6,8 @@ import numpy as np
 storage_client = storage.Client()
 bucket = storage_client.get_bucket('model-bucket-iris-yaniela')
 blob = bucket.blob('flowers-pkl')
-blob.download_to_filename('/tmp/flowers-pkl')
-model_pk = pickle.load(open('/tmp/flowers-pkl', 'rb'))
+blob.download_to_filename('flowers-pkl')
+model_pk = pickle.load(open('flowers-pkl', 'rb'))
 
 
 app=Flask(__name__)
