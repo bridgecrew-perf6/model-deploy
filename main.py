@@ -41,7 +41,7 @@ def api_predict():
        petal_length=data['petal.length']
        petal_width=data['petal.width']
        input_data=np.array([[sepal_length,sepal_width,petal_length,petal_width]])
-       prediction=model_pkl.predict(input_data) 
+       prediction=model_pk.predict(input_data) 
        return str(prediction)
     else: return "Please send a POST request"   
     
