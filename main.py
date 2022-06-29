@@ -1,12 +1,12 @@
 from flask import Flask, request
 import pickle
-from google.cloud import storage
+#from google.cloud import storage
 import numpy as np
 
-storage_client = storage.Client()
-bucket = storage_client.get_bucket('model-bucket-iris-yaniela')
-blob = bucket.blob('flowers-pkl')
-blob.download_to_filename('flowers-pkl')
+#storage_client = storage.Client()
+#bucket = storage_client.get_bucket('model-bucket-iris-yaniela')
+#blob = bucket.blob('flowers-pkl')
+#blob.download_to_filename('flowers-pkl')
 model_pk = pickle.load(open('flowers-pkl', 'rb'))
 
 
